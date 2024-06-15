@@ -1,0 +1,631 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+/* свойства в зыездочке при создании сайта нужно прописывать убирает дефекты  */
+.nav-item {
+  text-decoration: none;
+  display: inline-block;
+  color: aliceblue;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+/* дисплей инлайн блок элементы горизонтально */
+
+.nav-item:hover {
+  color: orange;
+  transform: scale(1.2);
+}
+
+nav {
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+
+  /* justify-content выравнивает элементы, когда они не используют все доступное пространство по горизонтали */
+
+  /* Свойство overflow указывает браузеру, как поступать с содержимым (текст, картинки, другие блоки), которое выходит за границы блока (за его ширину или высоту). */
+
+  /* hidden — скрывает то содержимое, которое вылезло за границы блока;
+
+scroll — добавляет полосы прокрутки, причём всегда, даже если ничего не вылазит (в этом случае они будут неактивными);
+
+auto — добавляет полосы прокрутки при необходимости: если содержимое не помещается — они появятся, если всё помещается — их не будет;
+
+visible — не скрывает то содержимое, которое вылезло за границы блока. */
+
+  /* space‑around равномерно распределяет элементы по ширине таким образом, чтобы расстояние до краёв блока равнялось половине расстояния между элементами */
+  /* padding: 20px; */
+
+  align-items: center;
+  z-index: 20;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+
+  /* позишн фиксед в одном месте позволяет закрепить элемент чтобы стоял на одном месте и не съезжал */
+  /* для навигационной панели сверху ( часто ) */
+}
+
+header {
+  height: 100vh;
+  background: linear-gradient(#db7e7e, #ffc997);
+}
+
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+
+  /* Z-index используется для стабилизации порядка элементов, которые перекрываются. */
+}
+
+/* при позишн абсолют нельзя текст элайн центер поэтому трансформ транслейт минус 50 при топ и лефт 50 по оси ординат и абсцисс */
+
+.header-content h1 {
+  font-size: 70px;
+  color: aliceblue;
+  text-shadow: 7px 7px 2px #db7e7e;
+}
+
+.header-content button,
+footer button {
+  height: 100px;
+  width: 300px;
+  border-radius: 100px;
+  box-shadow: 7px 7px 0px #db7e7e;
+  font-size: 24px;
+  margin-left: 150px;
+  margin-top: 30px;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+} /* кей фреймес это команда для создания анимации команда значит Я БУДУ ДЕЛАТЬ АНИМАЦИЮ В ЭТОМ ФАЙЛЕ РОТЭЙТ ЗНАЧИТ ВРАЩАТЬСЯ ИНФИНИТ ОЗНАЧАЕТ ВЕЧНО ВРАЩАЕТСЯ ЭТОТ КРУЖОК*/
+
+.circle-dashed-border {
+  animation: rotation 5s infinite;
+  position: absolute;
+  top: 150px;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.circle-third {
+  animation: move 10s infinite;
+  position: absolute;
+  width: 350px;
+  top: 180px;
+  left: 450px;
+}
+
+.circle {
+  position: absolute;
+  top: 350px;
+  left: 350px;
+}
+
+.about {
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  margin: auto;
+  padding-bottom: 100px;
+  padding-top: 100px;
+
+  /* Свойство display: flex.
+CSS-правило предназначено для выстраивания flexbox-сетки, которая строится из дочерних html-тэгов, расположенных внутри некоторого родительского контейнера. Для задания данной сетки необходимо установить правило display в значение:
+display: flex; — для блокового отображения;
+display: inline-flex; — для инлайнового отображения. */
+}
+
+main {
+  width: 100%;
+}
+
+.about h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+
+.about p {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.doing {
+  display: flex;
+  justify-content: center;
+  /* джастифай контент по ширине со строкой а по высоте с colum */
+  align-items: center;
+  /* элайн айтемс по высоте со строкой а с колонкой по ширине */
+  height: 700px;
+
+  background: linear-gradient(10deg, #db7e7e 18.07%, #ffc997 70%, #ffffff 70%);
+}
+
+.doing-left {
+  width: 40%;
+  vertical-align: top;
+}
+
+.doing-right {
+  width: 40%;
+}
+
+.doing-right img {
+  /* height: 100%; */
+  width: 100%;
+  margin-left: 50px;
+}
+
+.doing-left p {
+  font-size: 20px;
+  line-height: 30px;
+
+  box-shadow: 7px 7px 0px #db7e7e;
+  border-radius: 100px;
+  background: #ffffff;
+  padding: 50px;
+}
+
+.doing-left h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.services h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.list-services {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.service {
+  border: 2px solid #db7e7e;
+  width: 250px;
+  height: 400px;
+  margin: 0px 20px;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+hr {
+  margin: 10px 0px;
+  width: 60%;
+  height: 5px;
+  margin-left: 20%;
+  background-color: #db7e7e;
+}
+
+.services {
+  background: linear-gradient(10deg, #db7e7e 18.07%, #ffc997 70%, #ffffff 70%);
+  padding-top: 100px;
+}
+
+.why {
+  position: relative;
+  padding-top: 100px;
+}
+
+.why h2 {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.why_item {
+  border: 2px solid #db7e7e;
+  width: 700px;
+  /* height: 150px; */
+  margin: 0px 20px;
+  border-radius: 20px;
+  text-align: left;
+
+  font-size: 15px;
+  margin-bottom: 50px;
+  box-shadow: 7px 7px 0px #db7e7e;
+  font-size: large;
+
+  padding: 35px;
+
+  background-color: aliceblue;
+}
+
+.why_item h2 {
+  text-align: left;
+  margin-top: 0px;
+}
+
+.why-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  /* Свойство justify-content в CSS контролирует выравнивание элементов, когда они выходят за границы.
+
+Свойство justify-content должно быть использовано вместе со свойством display, которое имеет значение «flex». Для вертикального выравнивания элементов нужно использовать свойство align-items.
+
+Значения свойства justify-content:
+
+flex-start — элементы позиционируются от начала контейнера;
+
+flex-end — элементы позиционируются от конца контейнера;
+
+center — элементы выравниваются по центру контейнера;
+
+space-around — элементы равномерно распределяются по всей строке;
+
+space-between — между элементами есть равное пространство. */
+}
+
+/* этот кусок кода отвечает за элементы дизайн поддержка и разработка */
+
+/* дисплей флекс все элементы в строку */
+
+.inthedesign {
+  align-self: flex-start;
+}
+
+/* флекс старт прибивает к левому краю блока */
+
+/* .inthesupport {
+    align-self: flex-end;
+
+
+} */
+
+/* флекс-энд в конец блока ( правый край) */
+
+.inthesupport {
+  align-self: flex-start;
+}
+
+/* алаяйн селф работает если у родительского элемента задан дисплей флекс */
+
+/* HOMEWORK СДЕЛАТЬ ФОН ДЛЯ БЛОКА ВЫШЕ */
+
+.why-bg {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.why-content {
+  position: relative;
+
+  z-index: 5;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+/* паддинг чуть чуть подвинул блок чтобы было больше места для фигуры */
+
+.circle-seven {
+  height: 450px;
+  position: relative;
+  top: 150px;
+  left: 1055px;
+}
+
+.figure {
+  position: relative;
+  height: 300px;
+  right: 470px;
+  bottom: 150px;
+}
+
+/* ВЧЕРАШНИЕ ОШИБКИ НЕ ЗАБЫВАЙ ПРО ХЕДЕР КОНТЕНТ ПРИ УСТАНОВКЕ ФОНА И ПРО ПОЗИШН РЕЛАТИВ И АБСОЛЮТ */
+/* ПОЗИШН РЕЛАТИВ МОЖЕМ ДВИГАТЬ ЭЛЕМЕНТ ОТНОСИТЕЛЬНО ЕГО ТЕКУЩЕГО ПОЛОЖЕНИЯ */
+
+/* Position — это свойство, которое устанавливает способ позиционирования элемента относительно окна браузера или других объектов на веб-странице.
+
+Значения свойства position:
+
+Absolute — элемент абсолютно позиционирован, при этом другие элементы отображаются на веб-странице словно абсолютно позиционированного элемента нет.
+
+Fixed — привязывается к указанной свойствами left, top, right и bottom точке на экране и не меняет своего положения при прокрутке веб-страницы.
+
+Relative — положение элемента устанавливается относительно его исходного места. Добавление свойств left, top, right и bottom изменяет позицию элемента и сдвигает его в ту или иную сторону от первоначального расположения. */
+
+.photo {
+  width: 500px;
+  height: 250px;
+  border: 5px solid #db7e7e;
+  border-radius: 30px;
+  margin: 2px;
+}
+
+/* ДРУГОЙ СПОСОБ ДОБАВЛЕНИЯ КАРТИНОК */
+
+.photo1 {
+  background: url("img/portfolio/site1.png") center/cover no-repeat;
+
+  /* ЦЕНТЕР КАВЭР ПОЗВОЛЯЕТ ИСПОЛЬЗОВАТЬ ВСЮ КАРТИНКУ В РАМКЕ НО ЕСЛИ НЕ ДОБАВЛЯТЬ НО РЕПИТ БУДЕТ МНОГО МАЛЕНЬКИХ КАРТИНОК */
+}
+
+/* ДЗ */
+
+/* ДОБАВИТЬ КАРТИНКИ НА ФОН ДЛЯ ТРЕХ СЛЕДУЮЩИХ ДИВОВ ПОПРОБОВАТЬ ЗАКРУГЛИТЬ РАЗМЕСТИТЬ БЛОКИ КАК НА МАКЕТ ИСПОЛЬЗУЯ ДИСПЛЕЙ ФЛЕКС ( ФЛЕКС ДИРЕКШН) */
+
+.photo2 {
+  background: url("img/portfolio/site2.png") center/cover no-repeat;
+}
+
+.photo3 {
+  background: url("img/portfolio/site3.png") center/cover no-repeat;
+}
+.photo4 {
+  background: url("img/portfolio/site4.png") center/cover no-repeat;
+}
+
+.workpictures {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  padding-left: 250px;
+  padding-right: 250px;
+
+  /* паддинг лефт паддинг райт использовали потому что после флекс врэп одна картинка не сместилась куда нужно */
+  /* 
+    если элемент не помещается и уменьшается от этого в размере то испольутся флекс-врэп который говорит если элемент не умещается то переносится на следующую строчку */
+
+  /* items: center;
+        justify-content: center; */
+}
+
+.portfolio {
+  padding-top: 100px;
+}
+
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 15px;
+
+  font-size: 30px;
+}
+
+footer {
+  height: 250px;
+  background: linear-gradient(#db7e7e, #ffc997);
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+
+  /* сначала в строчку через дисплэй флекс потом в столбик через флекс дирекшн коламн (коламн- колонка) */
+}
+
+footer button {
+  margin-left: 0px;
+}
+
+/* обратились к двум кнопкам в хедэр баттон и в футер баттон убрали марджин лефт черз 0 пикселей чтобы кнопка не съезжала влево */
+
+@media (max-width: 1510px) {
+  .photo {
+    width: 450px;
+  }
+
+  .workpictures {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 1000px;
+  }
+
+  /* собака медиа это медиа запрос возможность применить какие то стили к устройствам конкретного размера */
+
+  .portfolio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-content h1 {
+    margin-top: 30px;
+    font-size: 60px;
+  }
+}
+
+/* ИЗЗА СРЫВА ЗАНЯТИЯ ЗАБЫЛ ВСЁ ЧТО БЫЛО НА ПРЕЖНЕМ УРОКЕ ПО ВЁРСТКЕ */
+
+@media (max-width: 1000px) {
+  .why_item {
+    width: 500px;
+  }
+
+  .header-content button,
+  footer button {
+    height: 66px;
+    width: 300px;
+    font-size: 20px;
+  }
+
+  .doing-right {
+    display: none;
+  }
+
+  /* дисплей нан временное скрытие */
+
+  .doing-left {
+    width: 80%;
+  }
+
+  nav {
+    max-width: 100vw;
+
+    /* вьюпорт вис в данном случае при адаптивной верстке означает что размер будет зависеть от ширины экрана устройства ( 100 не размер а просто значит полная ширина экрана) */
+
+    /* обратились к нав навигационной сайта */
+  }
+
+  .workpictures {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* в этом случае при удалении дефекта белой полосы справа не обязательно класть картинки как в компьютерной версии горизонтально можно и вертикально ибо мобильная версия */
+  }
+}
+
+@media (max-width: 800px) {
+  .about {
+    max-width: 100vw;
+  }
+
+  .list-services {
+    flex-direction: column;
+  }
+  .service {
+    margin-top: 15px;
+  }
+
+  .why-content {
+    padding: 20px;
+  }
+
+  .workpictures {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .why_item {
+    width: 300px;
+  }
+
+  .workpictures {
+    width: 400px;
+  }
+
+  .photo {
+    width: 350px;
+  }
+}
+
+/* ДЗ НАПИСАТЬ МЕДИА ЗАПРОС ДЛЯ УСТРОЙСТВ С МАКСИМАЛЬНОЙ ШИРИНОЙ ЭКРАНА МЕНЬШЕ 460 НЕ СТАРАТЬСЯ ПОДОГНАТЬ ПОД МАКЕТ А ЧТОБЫ ХОРОШО ОТОБРАЖАЛАСЬ НА ЭКРАНЕ УСЛОВНОГО ТЕЛЕФОНА */
+
+/* при респонсиве мы выбирали разные размеры экранов мобильных устройств ширину и высоту */
+
+/* имеется несколько основных стандартов 1200  пикселей или 1500 итд */
+
+@media (max-width: 460px) {
+  .navbar {
+    /* 
+    display: flex;
+    
+
+font-size: 2px;
+
+max-width: 100vw;
+
+display: flex;
+    justify-content: space-around; */
+  }
+
+  .logo {
+    height: 20px;
+    width: 50px;
+  }
+
+  .logo img {
+    height: 20px;
+    width: 50px;
+
+    margin-left: 7px;
+  }
+
+  nav {
+    height: 130px;
+  }
+
+  /* не выравнивали по центру для экранов меньше 460 так ак это омобо и не нужно */
+
+  .header-content h1 {
+    font-size: 50px;
+  }
+
+  .header-content button,
+  footer button {
+    height: 50px;
+    width: 250px;
+    font-size: 18px;
+    margin-top: 50px;
+
+    /* ПРЕЖДЕ ВСЕГО НАДО СМОТРЕТЬ ПО КОНСОЛИ РАЗРАБОТЧИКА КАКИЕ МЕНЯТЬ ЭЛЕМЕНТЫ */
+
+    /* В ПАНЕЛИ РАЗРАБОТЧИКА ТОЖЕ МОЖНО СМОТРЕТЬ И МЕНЯТЬ РАЗМЕРЫ ШРИФТА И ПРОЧЕЕ НЕ ПЕРЕХОДЯ В КОД */
+  }
+
+  .about {
+    padding: 0px 40px;
+    margin-bottom: 70px;
+  }
+
+  .photo {
+    width: 390px;
+  }
+}
+
+/* НЕ ЗАБЫВАЙ СМОТРЕТЬ ВСЕ ЭЕЛЕМЕНТЫ И РАЗДЕЛЫ САЙТА В ПАНЕЛИ РАЗРАБОТЧИКА КОТОРЫЕ ВЕРСТАЕШЬ ТАМ ЖЕ МОЖНО МЕНЯТЬ РАЗМЕРЫ И ПАРАМЕТРЫ И ПОТОМ ПЕРЕНОСИТЬ В КОД */
