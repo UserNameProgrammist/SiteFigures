@@ -393,7 +393,7 @@ Relative — положение элемента устанавливается 
 /* ДРУГОЙ СПОСОБ ДОБАВЛЕНИЯ КАРТИНОК */
 
 .photo1 {
-  background: url("img/portfolio/site1.png") center/cover no-repeat;
+  background: url("site1.png") center/cover no-repeat;
 
   /* ЦЕНТЕР КАВЭР ПОЗВОЛЯЕТ ИСПОЛЬЗОВАТЬ ВСЮ КАРТИНКУ В РАМКЕ НО ЕСЛИ НЕ ДОБАВЛЯТЬ НО РЕПИТ БУДЕТ МНОГО МАЛЕНЬКИХ КАРТИНОК */
 }
@@ -403,14 +403,14 @@ Relative — положение элемента устанавливается 
 /* ДОБАВИТЬ КАРТИНКИ НА ФОН ДЛЯ ТРЕХ СЛЕДУЮЩИХ ДИВОВ ПОПРОБОВАТЬ ЗАКРУГЛИТЬ РАЗМЕСТИТЬ БЛОКИ КАК НА МАКЕТ ИСПОЛЬЗУЯ ДИСПЛЕЙ ФЛЕКС ( ФЛЕКС ДИРЕКШН) */
 
 .photo2 {
-  background: url("img/portfolio/site2.png") center/cover no-repeat;
+  background: url("site2.png") center/cover no-repeat;
 }
 
 .photo3 {
-  background: url("img/portfolio/site3.png") center/cover no-repeat;
+  background: url("site3.png") center/cover no-repeat;
 }
 .photo4 {
-  background: url("img/portfolio/site4.png") center/cover no-repeat;
+  background: url("site4.png") center/cover no-repeat;
 }
 
 .workpictures {
